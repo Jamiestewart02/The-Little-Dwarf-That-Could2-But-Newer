@@ -80,7 +80,7 @@ int main() {
     Square10.setFillColor(sf::Color::Transparent);
     sf::RectangleShape Square11;
     Square11.setSize(sf::Vector2f(870, 76));
-    Square11.setFillColor(sf::Color::Red);
+    Square11.setFillColor(sf::Color::Transparent);
 #pragma endregion
 #pragma region ~Assets Declaration + Level~
 
@@ -268,7 +268,7 @@ int main() {
                 window.display();
             }
 #pragma endregion
-#pragma region ~Controlls~
+#pragma region ~Controls~
         else if (pageNum == 1) {
 
             ImGui::SFML::Update(window, deltaClock.restart());
