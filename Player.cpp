@@ -112,13 +112,17 @@ void Player::update(sf::RenderWindow& window) {
 	jump();
 	movePlayer();
 	attack();
+
+	if (isBow) {
+		animation.coordinates.top = 80;
+	} else if (isAxe) {
+		animation.coordinates.top = 160;
+	} else {
+		animation.coordinates.top = 0;
+	}
+
 	animation.Animate(rect, animation.switchTime);
 	window.draw(rect);
-	/*window.draw(topBound);
-	window.draw(leftBound);
-	window.draw(bottomBound);
-	window.draw(rightBound);
-	window.draw(hurtBox);*/
 }
 
 sf::FloatRect Player::getBounds() {
@@ -272,7 +276,6 @@ void Player::shoot(std::vector<Platform> ledges, sf::RenderWindow& window) {
 }
 
 void Player::checkBounds(std::vector<Platform> platforms) {
-
 
 	for (int i = 0; i < platforms.size(); i++) {
 

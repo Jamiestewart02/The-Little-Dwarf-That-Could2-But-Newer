@@ -52,6 +52,11 @@ public:
 	bool shot = false;
 	bool ropeGrow = false;
 	sf::RectangleShape bullet;
+	bool isPick = true;
+	bool isAxe = false;
+	bool isBow = false;
+	bool isGrappling = false;
+
 
 	sf::RectangleShape topBound;
 	sf::RectangleShape leftBound;
