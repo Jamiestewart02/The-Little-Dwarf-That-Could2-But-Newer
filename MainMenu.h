@@ -4,6 +4,7 @@
 #include "Player.h"
 #include <iostream>
 #define Max_Main_Menu 3
+#define Min_Main_Menu 0
 class MainMenu
 {
 public:
@@ -11,6 +12,7 @@ public:
 
 	void draw(sf::RenderWindow& window);
 	void Down();
+	void Up();
 	void clear();
 	int optionSelectedMenu;
 	int pageNum = 0;

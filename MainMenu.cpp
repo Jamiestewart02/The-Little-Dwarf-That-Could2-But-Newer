@@ -38,6 +38,26 @@ void MainMenu::Down()
 
 	}
 }
+void MainMenu::Up()
+{
+	if (optionSelectedMenu -1 >= -1)
+	{
+
+		mainMenu[optionSelectedMenu].setFillColor(sf::Color::Black);
+		optionSelectedMenu--;
+
+
+		if (optionSelectedMenu == -1)
+		{
+			optionSelectedMenu = 2;
+
+
+		}
+		std::cout << optionSelectedMenu;
+		mainMenu[optionSelectedMenu].setFillColor(sf::Color::Red);
+
+	}
+}
 void MainMenu::clear()
 {
 	mainMenu[0].setFillColor(sf::Color::Transparent);
@@ -168,6 +188,10 @@ void MainMenu::mainMenuControls(sf::RenderWindow &window) {
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down) && pageNum == 0)
 	{
 		Down();
+	}
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up) && pageNum == 0)
+	{
+		Up();
 	}
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Return) && pageNum == 0)
 	{
